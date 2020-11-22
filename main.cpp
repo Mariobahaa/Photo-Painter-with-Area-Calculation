@@ -53,7 +53,7 @@ public :
     }
     float calcArea()
     {
-       return abs((float)(UL.getX()-BR.getX())*(float)(UL.getY()-BR.getY()));
+       return abs((float)abs(UL.getX()-BR.getX())*(float)abs(UL.getY()-BR.getY()));
 
     }
 
@@ -115,11 +115,10 @@ public :
 
     }
     float calcArea(){
-        return(0.5*
-               abs((float)(a.getX()*(b.getY()-c.getY())))*
-               abs((float)(b.getX()*(c.getY()-a.getY())))*
-            abs((float)(c.getX()*(a.getY()-b.getY())))
-             );
+        return(
+               (float)abs(a.getX()*abs(b.getY()-c.getY()))+
+               (float)abs(b.getX()*abs(c.getY()-a.getY()))+
+            (float)abs(c.getX()*abs(a.getY()-b.getY())))/2.0;
     }
 
 };
@@ -145,7 +144,7 @@ public :
     }
 
     float calcArea(){
-        return (22/7)*(float)radius*(float)radius;
+        return (22.0/7.0)*(float)radius*(float)radius;
     }
 
 
@@ -178,6 +177,7 @@ public:
         for(int i=0;i<numOfShapes;i++)
         {
             Sum+= (float)shapes[i]->calcArea();
+            cout << (float)shapes[i]->calcArea() << endl;
         }
         return Sum;
     }
@@ -192,7 +192,7 @@ public:
 };
 int main()
 {
-    system("cls");
+   // system("cls");
     //initgraph();
     Shape * sh[8];
 

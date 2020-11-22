@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1606058922 source:e:\career\iti\cdb\oopitilab7p2\main.cpp
+	<iostream>
+	"graphics.h"
+	<math.h>
+
+1509357770 e:\career\iti\cdb\oopitilab7p2\graphics.h
+	<iostream>
+	<math.h>
+	<windows.h>
+	<Windows.h>
+
