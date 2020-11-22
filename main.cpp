@@ -126,25 +126,25 @@ public :
 
 class Circle: public Shape {
     point center;
-    int radius;
+    int diameter;
     //int color;
 
 public :
     Circle(point p, int r,int c): Shape(c){
         center = p;
-        radius = r ;
+        diameter = r ;
         // color = c;
     }
 
     void draw(){
         //initgraph();
         setcolor(getColor());
-        circle(center.getX(),center.getY(), radius);
+        circle(center.getX(),center.getY(), diameter);
 
     }
 
     float calcArea(){
-        return (22.0/7.0)*(float)radius*(float)radius;
+        return (22.0/7.0)*(float)(diameter/2.0)*(float)(diameter/2.0);
     }
 
 
