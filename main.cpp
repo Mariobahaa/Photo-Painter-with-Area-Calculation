@@ -177,7 +177,7 @@ public:
         for(int i=0;i<numOfShapes;i++)
         {
             Sum+= (float)shapes[i]->calcArea();
-            cout << (float)shapes[i]->calcArea() << endl;
+            //cout << (float)shapes[i]->calcArea() << endl;
         }
         return Sum;
     }
@@ -207,7 +207,7 @@ int main()
 
     Picture P(sh,8);
     P.paint();
-    cout << P.sumAreas() << endl;
+    cout << "Sum of Areas = " << P.sumAreas() << endl;
 
     int x;
     cin >> x;
